@@ -1,0 +1,12 @@
+# Virtual environment
+env/
+
+# Django generated files
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+static/
+
+# Local development settings
+settings/local.py
