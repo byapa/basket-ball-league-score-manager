@@ -5,7 +5,9 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from backend.serializers import UserSerializer, GroupSerializer
+from rest_framework import generics
+from .models import Team, Player
+from backend.serializers import UserSerializer, GroupSerializer, TeamSerializer, PlayerSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -24,3 +26,32 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+
+class PlayerListCreateView(generics.ListCreateAPIView):
+    """
+    API endpoint that allows players to be viewed or created.
+    """
+    queryset = Player.objects.all()
+    serializer_class = PlayerSerializer
+
+class PlayerRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    API endpoint that allows players to be viewed,updated or deleted individually.
+    """
+    queryset = Player.objects.all()
+    serializer_class = PlayerSerializer
+
+class TeamListCreateView(generics.ListCreateAPIView):
+    """
+    API endpoint that allows teams to be viewed or created.
+    """
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer
+
+class TeamRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    API endpoint that allows teams to be viewed,updated or deleted individually.
+    """
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer

@@ -5,19 +5,20 @@ class Team(models.Model):
 
 class Player(models.Model):
     name = models.CharField(max_length=200)
-    height = models.IntegerField()
+    height_in_cm = models.DecimalField(max_digits=5, decimal_places=2)
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name= 'players')
 
 class Game(models.Model):
     played_on = models.DateTimeField()
 
-class IndividualScore(models.Model):
+class Score(models.Model):
     score = models.IntegerField()
+
+class IndividualScore(Score):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='scores')
     game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='individual_scores')
 
-class TeamScore(models.Model):
-    score = models.IntegerField()
+class TeamScore(Score):
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name= 'scores')
     game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='team_scores')
 
