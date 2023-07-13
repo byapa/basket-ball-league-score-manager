@@ -6,8 +6,8 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
-from .models import Team, Player
-from backend.serializers import UserSerializer, GroupSerializer, TeamSerializer, PlayerSerializer
+from .models import Team, Player, TeamScore, IndividualScore, Game
+from backend.serializers import UserSerializer, GroupSerializer, TeamSerializer, PlayerSerializer, TeamScoreSerializer, IndividualScoreSerializer, GameSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -55,3 +55,45 @@ class TeamRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     """
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
+
+class GameListCreateView(generics.ListCreateAPIView):
+    """
+    API endpoint that allows games to be viewed or created.
+    """
+    queryset = Game.objects.all()
+    serializer_class = GameSerializer
+
+class GameRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    API endpoint that allows games to be viewed,updated or deleted individually.
+    """
+    queryset = Game.objects.all()
+    serializer_class = GameSerializer
+
+class TeamScoreListCreateView(generics.ListCreateAPIView):
+    """
+    API endpoint that allows team scores to be viewed or created.
+    """
+    queryset = TeamScore.objects.all()
+    serializer_class = TeamScoreSerializer
+
+class TeamScoreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    API endpoint that allows team scores to be viewed,updated or deleted individually.
+    """
+    queryset = TeamScore.objects.all()
+    serializer_class = TeamScoreSerializer
+
+class IndividualScoreListCreateView(generics.ListCreateAPIView):
+    """
+    API endpoint that allows individual scores to be viewed or created.
+    """
+    queryset = IndividualScore.objects.all()
+    serializer_class = IndividualScoreSerializer
+
+class IndividualScoreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    API endpoint that allows individual scores to be viewed,updated or deleted individually.
+    """
+    queryset = IndividualScore.objects.all()
+    serializer_class = IndividualScoreSerializer

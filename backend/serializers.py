@@ -8,13 +8,23 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ['url', 'username', 'email', 'groups']
 
-
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
 
+class TeamScoreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TeamScore
+        fields = '__all__'
+
+class IndividualScoreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = IndividualScore
+        fields = '__all__'
+
 class PlayerSerializer(serializers.ModelSerializer):
+    scores = IndividualScoreSerializer(many = True, read_only = True)
     class Meta:
         model = Player
         fields = '__all__'
