@@ -2,7 +2,6 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from .models import Player, Team, Game, IndividualScore, TeamScore
 
-
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
@@ -36,6 +35,11 @@ class PlayerSerializer(serializers.ModelSerializer):
 
 class TeamSerializer(serializers.ModelSerializer):
     players = PlayerSerializer(many = True, read_only = True)
+    average_score = serializers.SerializerMethodField()
+
+    def get_average_score(self, obj):
+        return obj.average_score
+    
     class Meta:
         model = Team
         fields = '__all__'
