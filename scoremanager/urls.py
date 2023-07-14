@@ -23,6 +23,7 @@ from backend.views import TeamListCreateView, TeamRetrieveUpdateDestroyView
 from backend.views import GameListCreateView, GameRetrieveUpdateDestroyView
 from backend.views import TeamScoreListCreateView, TeamScoreRetrieveUpdateDestroyView
 from backend.views import IndividualScoreListCreateView, IndividualScoreRetrieveUpdateDestroyView
+from backend.views import top_players_view
 
 
 router = routers.DefaultRouter()
@@ -44,4 +45,5 @@ urlpatterns = [
     path('api/team-scores/<int:pk>/', TeamScoreRetrieveUpdateDestroyView.as_view(), name='team-score-detail'),
     path('api/individual-scores/', IndividualScoreListCreateView.as_view(), name='individual-score-list'),
     path('api/individual-scores/<int:pk>/', IndividualScoreRetrieveUpdateDestroyView.as_view(), name='individual-score-detail'),
+    path('api/teams/<int:team_id>/top-players', top_players_view, name='top-player-details'),
 ]

@@ -25,6 +25,11 @@ class IndividualScoreSerializer(serializers.ModelSerializer):
 
 class PlayerSerializer(serializers.ModelSerializer):
     scores = IndividualScoreSerializer(many = True, read_only = True)
+    average_score = serializers.SerializerMethodField()
+
+    def get_average_score(self, obj):
+        return obj.average_score
+
     class Meta:
         model = Player
         fields = '__all__'
