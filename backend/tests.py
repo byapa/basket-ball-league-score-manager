@@ -1,7 +1,7 @@
-from django.test import TestCase
-from django.test import TestCase, Client
-from django.core.management import call_command
 import os
+
+from django.core.management import call_command
+from django.test import Client, TestCase
 
 
 class BackendTest(TestCase):
