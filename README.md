@@ -14,8 +14,12 @@ python manage.py migrate
 
 ### 3. Load seed data
 Run following command from the root directory.
-    python manage.py loaddata backend/fixtures/*
+```
+python manage.py loaddata backend/fixtures/*
+```
 
 ### 4. Run the application
 Run following command from the root directory.
-    python manage.py runserver
+```
+python manage.py runserver
+```
