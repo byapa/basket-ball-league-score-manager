@@ -1,0 +1,38 @@
+[
+    {
+        "model": "backend.GameTeam",
+        "pk": 1,
+        "fields": {
+            "game": 1,
+            "team": 1,
+            "score": 85
+        }
+    },
+    {
+        "model": "backend.GameTeam",
+        "pk": 2,
+        "fields": {
+            "game": 1,
+            "team": 2,
+            "score": 75
+        }
+    },
+    {
+        "model": "backend.GameTeam",
+        "pk": 3,
+        "fields": {
+            "game": 2,
+            "team": 1,
+            "score": 90
+        }
+    },
+    {
+        "model": "backend.GameTeam",
+        "pk": 4,
+        "fields": {
+            "game": 2,
+            "team": 2,
+            "score": 100
+        }
+    }
+]

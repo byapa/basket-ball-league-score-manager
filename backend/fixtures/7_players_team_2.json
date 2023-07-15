@@ -1,0 +1,102 @@
+[
+    {
+        "model": "backend.player",
+        "pk": 11,
+        "fields": {
+          "user": 111,
+          "name": "Team 2 - Player 1",
+          "height_in_cm": 180.5,
+          "team": 2
+        }
+    },
+    {
+        "model": "backend.player",
+        "pk": 12,
+        "fields": {
+          "user": 112,
+          "name": "Team 2 - Player 2",
+          "height_in_cm": 176.5,
+          "team": 2
+        }
+    },
+    {
+        "model": "backend.player",
+        "pk": 13,
+        "fields": {
+          "user": 113,
+          "name": "Team 2 - Player 3",
+          "height_in_cm": 175.5,
+          "team": 2
+        }
+    },
+    {
+        "model": "backend.player",
+        "pk": 14,
+        "fields": {
+          "user": 114,
+          "name": "Team 2 - Player 4",
+          "height_in_cm": 183,
+          "team": 2
+        }
+    },
+    {
+        "model": "backend.player",
+        "pk": 15,
+        "fields": {
+          "user": 115,
+          "name": "Team 2 - Player 5",
+          "height_in_cm": 177,
+          "team": 2
+        }
+    },
+    {
+        "model": "backend.player",
+        "pk": 16,
+        "fields": {
+          "user": 116,
+          "name": "Team 2 - Player 6",
+          "height_in_cm": 175,
+          "team": 2
+        }
+    },
+    {
+        "model": "backend.player",
+        "pk": 17,
+        "fields": {
+          "user": 117,
+          "name": "Team 2 - Player 7",
+          "height_in_cm": 176.5,
+          "team": 2
+        }
+    },
+    {
+        "model": "backend.player",
+        "pk": 18,
+        "fields": {
+          "user": 118,
+          "name": "Team 2 - Player 8",
+          "height_in_cm": 179,
+          "team": 2
+        }
+    },
+    {
+      "model": "backend.player",
+      "pk": 19,
+      "fields": {
+        "user": 119,
+        "name": "Team 2 - Player 9",
+        "height_in_cm": 182,
+        "team": 2
+      }
+    },
+    {
+      "model": "backend.player",
+      "pk": 20,
+      "fields": {
+        "user": 120,
+        "name": "Team 2 - Player 10",
+        "height_in_cm": 179,
+        "team": 2
+      }
+    }
+]

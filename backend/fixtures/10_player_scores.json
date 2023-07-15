@@ -1,0 +1,110 @@
+[
+    {
+        "model": "backend.GamePlayer",
+        "pk": 1,
+        "fields": {
+            "game": 1,
+            "player": 1,
+            "score": 25
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 2,
+        "fields": {
+            "game": 1,
+            "player": 2,
+            "score": 15
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 3,
+        "fields": {
+            "game": 1,
+            "player": 3,
+            "score": 20
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 4,
+        "fields": {
+            "game": 1,
+            "player": 4,
+            "score": 0
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 5,
+        "fields": {
+            "game": 1,
+            "player": 5,
+            "score": 0
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 6,
+        "fields": {
+            "game": 1,
+            "player": 6,
+            "score": 25
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 7,
+        "fields": {
+            "game": 1,
+            "player": 11,
+            "score": 20
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 8,
+        "fields": {
+            "game": 1,
+            "player": 12,
+            "score": 22
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 9,
+        "fields": {
+            "game": 1,
+            "player": 13,
+            "score": 23
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 10,
+        "fields": {
+            "game": 1,
+            "player": 14,
+            "score": 10
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 11,
+        "fields": {
+            "game": 1,
+            "player": 15,
+            "score": 0
+        }
+    },
+    {
+        "model": "backend.GamePlayer",
+        "pk": 12,
+        "fields": {
+            "game": 1,
+            "player": 17,
+            "score": 0
+        }
+    }
+]
