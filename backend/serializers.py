@@ -5,31 +5,46 @@ from .models import Game, GamePlayer, GameTeam, Player, Team
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    Serializer for the User model
+    """
     class Meta:
         model = User
         fields = ["url", "username", "email", "groups"]
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    Serializer for the Group model
+    """
     class Meta:
         model = Group
         fields = ["url", "name"]
 
 
 class TeamScoreSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Team model
+    """
     class Meta:
         model = GameTeam
         fields = "__all__"
 
 
-class IndividualScoreSerializer(serializers.ModelSerializer):
+class GamePlayerSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the GamePlayer model
+    """
     class Meta:
         model = GamePlayer
         fields = "__all__"
 
 
 class PlayerSerializer(serializers.ModelSerializer):
-    scores = IndividualScoreSerializer(many=True, read_only=True)
+    """
+    Serializer for the Player model
+    """
+    scores = GamePlayerSerializer(many=True, read_only=True)
     average_score = serializers.SerializerMethodField()
 
     def get_average_score(self, obj):
@@ -41,6 +56,9 @@ class PlayerSerializer(serializers.ModelSerializer):
 
 
 class TeamSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Team model
+    """
     players = PlayerSerializer(many=True, read_only=True)
     average_score = serializers.SerializerMethodField()
 
@@ -53,6 +71,9 @@ class TeamSerializer(serializers.ModelSerializer):
 
 
 class GameSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Game model
+    """
     class Meta:
         model = Game
         fields = "__all__"

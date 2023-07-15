@@ -1,10 +1,10 @@
 import numpy as np
 from django.contrib.auth.models import Group, User
 from django.http import JsonResponse
-from rest_framework import generics, permissions, viewsets
+from rest_framework import generics, viewsets
 
 from backend.serializers import (GameSerializer, GroupSerializer,
-                                 IndividualScoreSerializer, PlayerSerializer,
+                                 GamePlayerSerializer, PlayerSerializer,
                                  TeamScoreSerializer, TeamSerializer,
                                  UserSerializer)
 
@@ -109,7 +109,7 @@ class IndividualScoreListCreateView(generics.ListCreateAPIView):
     """
 
     queryset = GamePlayer.objects.all()
-    serializer_class = IndividualScoreSerializer
+    serializer_class = GamePlayerSerializer
 
 
 class IndividualScoreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
@@ -118,10 +118,14 @@ class IndividualScoreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPI
     """
 
     queryset = GamePlayer.objects.all()
-    serializer_class = IndividualScoreSerializer
+    serializer_class = GamePlayerSerializer
 
 
-def top_players_view(request, team_id):
+def top_players_view(_request, team_id):
+    """
+    API endpoint that allows the retrieval of top players in a team
+    """
+
     all_players = list(Player.objects.filter(team=team_id))
 
     response_data = []
