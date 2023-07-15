@@ -17,33 +17,68 @@ Including another URLconf
 
 from django.urls import include, path
 from rest_framework import routers
-from backend import views
-from backend.views import PlayerListCreateView, PlayerRetrieveUpdateDestroyView
-from backend.views import TeamListCreateView, TeamRetrieveUpdateDestroyView
-from backend.views import GameListCreateView, GameRetrieveUpdateDestroyView
-from backend.views import TeamScoreListCreateView, TeamScoreRetrieveUpdateDestroyView
-from backend.views import IndividualScoreListCreateView, IndividualScoreRetrieveUpdateDestroyView
-from backend.views import top_players_view
 
+from backend import views
+from backend.views import (
+    GameListCreateView,
+    GameRetrieveUpdateDestroyView,
+    IndividualScoreListCreateView,
+    IndividualScoreRetrieveUpdateDestroyView,
+    PlayerListCreateView,
+    PlayerRetrieveUpdateDestroyView,
+    TeamListCreateView,
+    TeamRetrieveUpdateDestroyView,
+    TeamScoreListCreateView,
+    TeamScoreRetrieveUpdateDestroyView,
+    top_players_view,
+)
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r"users", views.UserViewSet)
+router.register(r"groups", views.GroupViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/players/', PlayerListCreateView.as_view(), name='player-list'),
-    path('api/players/<int:pk>/', PlayerRetrieveUpdateDestroyView.as_view(), name='player-detail'),
-    path('api/teams/', TeamListCreateView.as_view(), name='team-list'),
-    path('api/teams/<int:pk>/', TeamRetrieveUpdateDestroyView.as_view(), name='team-detail'),
-    path('api/games/', GameListCreateView.as_view(), name='game-list'),
-    path('api/games/<int:pk>/', GameRetrieveUpdateDestroyView.as_view(), name='game-detail'),
-    path('api/team-scores/', TeamScoreListCreateView.as_view(), name='team-score-list'),
-    path('api/team-scores/<int:pk>/', TeamScoreRetrieveUpdateDestroyView.as_view(), name='team-score-detail'),
-    path('api/individual-scores/', IndividualScoreListCreateView.as_view(), name='individual-score-list'),
-    path('api/individual-scores/<int:pk>/', IndividualScoreRetrieveUpdateDestroyView.as_view(), name='individual-score-detail'),
-    path('api/teams/<int:team_id>/top-players', top_players_view, name='top-player-details'),
+    path("", include(router.urls)),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    path("api/players/", PlayerListCreateView.as_view(), name="player-list"),
+    path(
+        "api/players/<int:pk>/",
+        PlayerRetrieveUpdateDestroyView.as_view(),
+        name="player-detail",
+    ),
+    path("api/teams/", TeamListCreateView.as_view(), name="team-list"),
+    path(
+        "api/teams/<int:pk>/",
+        TeamRetrieveUpdateDestroyView.as_view(),
+        name="team-detail",
+    ),
+    path("api/games/", GameListCreateView.as_view(), name="game-list"),
+    path(
+        "api/games/<int:pk>/",
+        GameRetrieveUpdateDestroyView.as_view(),
+        name="game-detail",
+    ),
+    path("api/team-scores/", TeamScoreListCreateView.as_view(), name="team-score-list"),
+    path(
+        "api/team-scores/<int:pk>/",
+        TeamScoreRetrieveUpdateDestroyView.as_view(),
+        name="team-score-detail",
+    ),
+    path(
+        "api/individual-scores/",
+        IndividualScoreListCreateView.as_view(),
+        name="individual-score-list",
+    ),
+    path(
+        "api/individual-scores/<int:pk>/",
+        IndividualScoreRetrieveUpdateDestroyView.as_view(),
+        name="individual-score-detail",
+    ),
+    path(
+        "api/teams/<int:team_id>/top-players",
+        top_players_view,
+        name="top-player-details",
+    ),
 ]
