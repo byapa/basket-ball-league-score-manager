@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
-from .models import Team, Player, TeamScore, IndividualScore, Game
+from .models import Team, Player, GameTeam, GamePlayer, Game
 from backend.serializers import UserSerializer, GroupSerializer, TeamSerializer, PlayerSerializer, TeamScoreSerializer, IndividualScoreSerializer, GameSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -69,40 +69,41 @@ class TeamScoreListCreateView(generics.ListCreateAPIView):
     """
     API endpoint that allows team scores to be viewed or created.
     """
-    queryset = TeamScore.objects.all()
+    queryset = GameTeam.objects.all()
     serializer_class = TeamScoreSerializer
 
 class TeamScoreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     """
     API endpoint that allows team scores to be viewed,updated or deleted individually.
     """
-    queryset = TeamScore.objects.all()
+    queryset = GameTeam.objects.all()
     serializer_class = TeamScoreSerializer
 
 class IndividualScoreListCreateView(generics.ListCreateAPIView):
     """
     API endpoint that allows individual scores to be viewed or created.
     """
-    queryset = IndividualScore.objects.all()
+    queryset = GamePlayer.objects.all()
     serializer_class = IndividualScoreSerializer
 
 class IndividualScoreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     """
     API endpoint that allows individual scores to be viewed,updated or deleted individually.
     """
-    queryset = IndividualScore.objects.all()
+    queryset = GamePlayer.objects.all()
     serializer_class = IndividualScoreSerializer
 
 def top_players_view(request, team_id):
 
     all_players = list(Player.objects.filter(team = team_id))
+
     response_data = []
 
     if all_players:
 
         ninetieth_percentile_score = _get_ninetieth_percentile_score(all_players)
 
-        all_players_in_ninetieth_percentile = list(filter(lambda player:player.average_score >= ninetieth_percentile_score, all_players))
+        all_players_in_ninetieth_percentile = list(filter(lambda player:player.average_score > 0 and player.average_score >= ninetieth_percentile_score, all_players))
 
         serializer = PlayerSerializer(all_players_in_ninetieth_percentile, many=True)
         response_data = serializer.data

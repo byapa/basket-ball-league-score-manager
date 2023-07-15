@@ -1,0 +1,92 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 101,
+      "fields": {
+        "username": "player_1",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 102,
+      "fields": {
+        "username": "player_2",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 103,
+      "fields": {
+        "username": "player_3",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 104,
+      "fields": {
+        "username": "player_4",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 105,
+      "fields": {
+        "username": "player_5",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 106,
+      "fields": {
+        "username": "player_6",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 107,
+      "fields": {
+        "username": "player_7",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 108,
+      "fields": {
+        "username": "player_8",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 109,
+      "fields": {
+        "username": "player_9",
+        "password": "password123",
+        "groups": [3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 110,
+      "fields": {
+        "username": "player_10",
+        "password": "password123",
+        "groups": [3]
+      }
+    }
+]

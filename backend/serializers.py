@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import Player, Team, Game, IndividualScore, TeamScore
+from .models import Player, Team, Game, GamePlayer, GameTeam
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -14,12 +14,12 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 class TeamScoreSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TeamScore
+        model = GameTeam
         fields = '__all__'
 
 class IndividualScoreSerializer(serializers.ModelSerializer):
     class Meta:
-        model = IndividualScore
+        model = GamePlayer
         fields = '__all__'
 
 class PlayerSerializer(serializers.ModelSerializer):
