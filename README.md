@@ -1,6 +1,6 @@
 # Basket Ball League Score manager
 
-This is a sample applicaiton written in Django (v4.2.3) and Python (v3.10.12) to address the requirements mentioned [requirements.tx](requirmenets.txt).
+This is a sample applicaiton written in Django (v4.2.3) and Python (v3.10.12) to address the requirements mentioned [requirements.txt](requirements.txt).
 
 ## Steps to Run
 ### 1. Install Pre-requisites
