@@ -1,3 +1,5 @@
+"""Models"""
+
 from django.contrib.auth.models import Group, User
 from django.db import models
 from django.db.models.signals import pre_save
