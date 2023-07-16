@@ -10,3 +10,5 @@ static/
 
 # Local development settings
 settings/local.py
+/.vscode/
+/.idea/
