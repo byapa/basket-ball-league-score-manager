@@ -1,57 +1,69 @@
 [
-    {
-      "model": "auth.user",
-      "pk": 1,
-      "fields": {
-        "username": "league_admin_1",
-        "password": "password123",
-        "groups": [1]
-      }
-    },
-    {
-      "model": "auth.user",
-      "pk": 2,
-      "fields": {
-        "username": "league_admin_2",
-        "password": "password123",
-        "groups": [1]
-      }
-    },
-    {
-      "model": "auth.user",
-      "pk": 11,
-      "fields": {
-        "username": "coach_1",
-        "password": "password123",
-        "groups": [2]
-      }
-    },
-    {
-      "model": "auth.user",
-      "pk": 12,
-      "fields": {
-        "username": "coach_2",
-        "password": "password123",
-        "groups": [2]
-      }
-    },
-    {
-      "model": "auth.user",
-      "pk": 13,
-      "fields": {
-        "username": "coach_3",
-        "password": "password123",
-        "groups": [2]
-      }
-    },
-    {
-      "model": "auth.user",
-      "pk": 14,
-      "fields": {
-        "username": "coach_4",
-        "password": "password123",
-        "groups": [2]
-      }
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "league_admin_1",
+      "password": "password123",
+      "groups": [
+        1
+      ]
     }
-  ]
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "league_admin_2",
+      "password": "password123",
+      "groups": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+      "username": "coach_1",
+      "password": "password123",
+      "groups": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+      "username": "coach_2",
+      "password": "password123",
+      "groups": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+      "username": "coach_3",
+      "password": "password123",
+      "groups": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+      "username": "coach_4",
+      "password": "password123",
+      "groups": [
+        2
+      ]
+    }
+  }
+]
   

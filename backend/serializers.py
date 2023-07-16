@@ -8,6 +8,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     """
     Serializer for the User model
     """
+
     class Meta:
         model = User
         fields = ["url", "username", "email", "groups"]
@@ -17,6 +18,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     """
     Serializer for the Group model
     """
+
     class Meta:
         model = Group
         fields = ["url", "name"]
@@ -26,6 +28,7 @@ class TeamScoreSerializer(serializers.ModelSerializer):
     """
     Serializer for the Team model
     """
+
     class Meta:
         model = GameTeam
         fields = "__all__"
@@ -35,6 +38,7 @@ class GamePlayerSerializer(serializers.ModelSerializer):
     """
     Serializer for the GamePlayer model
     """
+
     class Meta:
         model = GamePlayer
         fields = "__all__"
@@ -74,6 +78,7 @@ class GameSerializer(serializers.ModelSerializer):
     """
     Serializer for the Game model
     """
+
     class Meta:
         model = Game
         fields = "__all__"

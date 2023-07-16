@@ -7,7 +7,6 @@ from backend.serializers import (GameSerializer, GroupSerializer,
                                  GamePlayerSerializer, PlayerSerializer,
                                  TeamScoreSerializer, TeamSerializer,
                                  UserSerializer)
-
 from .models import Game, GamePlayer, GameTeam, Player, Team
 
 
@@ -136,7 +135,7 @@ def top_players_view(_request, team_id):
         all_players_in_ninetieth_percentile = list(
             filter(
                 lambda player: player.average_score > 0
-                and player.average_score >= ninetieth_percentile_score,
+                               and player.average_score >= ninetieth_percentile_score,
                 all_players,
             )
         )

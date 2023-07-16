@@ -1,102 +1,102 @@
 [
-    {
-        "model": "backend.player",
-        "pk": 1,
-        "fields": {
-          "user": 101,
-          "name": "Team 1 - Player 1",
-          "height_in_cm": 180.5,
-          "team": 1
-        }
-    },
-    {
-        "model": "backend.player",
-        "pk": 2,
-        "fields": {
-          "user": 102,
-          "name": "Team 1 - Player 2",
-          "height_in_cm": 176.5,
-          "team": 1
-        }
-    },
-    {
-        "model": "backend.player",
-        "pk": 3,
-        "fields": {
-          "user": 103,
-          "name": "Team 1 - Player 3",
-          "height_in_cm": 175.5,
-          "team": 1
-        }
-    },
-    {
-        "model": "backend.player",
-        "pk": 4,
-        "fields": {
-          "user": 104,
-          "name": "Team 1 - Player 4",
-          "height_in_cm": 183,
-          "team": 1
-        }
-    },
-    {
-        "model": "backend.player",
-        "pk": 5,
-        "fields": {
-          "user": 105,
-          "name": "Team 1 - Player 5",
-          "height_in_cm": 177,
-          "team": 1
-        }
-    },
-    {
-        "model": "backend.player",
-        "pk": 6,
-        "fields": {
-          "user": 106,
-          "name": "Team 1 - Player 6",
-          "height_in_cm": 175,
-          "team": 1
-        }
-    },
-    {
-        "model": "backend.player",
-        "pk": 7,
-        "fields": {
-          "user": 107,
-          "name": "Team 1 - Player 7",
-          "height_in_cm": 176.5,
-          "team": 1
-        }
-    },
-    {
-        "model": "backend.player",
-        "pk": 8,
-        "fields": {
-          "user": 108,
-          "name": "Team 1 - Player 8",
-          "height_in_cm": 179,
-          "team": 1
-        }
-    },
-    {
-      "model": "backend.player",
-      "pk": 9,
-      "fields": {
-        "user": 109,
-        "name": "Team 1 - Player 9",
-        "height_in_cm": 182,
-        "team": 1
-      }
-    },
-    {
-      "model": "backend.player",
-      "pk": 10,
-      "fields": {
-        "user": 110,
-        "name": "Team 1 - Player 10",
-        "height_in_cm": 179,
-        "team": 1
-      }
+  {
+    "model": "backend.player",
+    "pk": 1,
+    "fields": {
+      "user": 101,
+      "name": "Team 1 - Player 1",
+      "height_in_cm": 180.5,
+      "team": 1
     }
+  },
+  {
+    "model": "backend.player",
+    "pk": 2,
+    "fields": {
+      "user": 102,
+      "name": "Team 1 - Player 2",
+      "height_in_cm": 176.5,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 3,
+    "fields": {
+      "user": 103,
+      "name": "Team 1 - Player 3",
+      "height_in_cm": 175.5,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 4,
+    "fields": {
+      "user": 104,
+      "name": "Team 1 - Player 4",
+      "height_in_cm": 183,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 5,
+    "fields": {
+      "user": 105,
+      "name": "Team 1 - Player 5",
+      "height_in_cm": 177,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 6,
+    "fields": {
+      "user": 106,
+      "name": "Team 1 - Player 6",
+      "height_in_cm": 175,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 7,
+    "fields": {
+      "user": 107,
+      "name": "Team 1 - Player 7",
+      "height_in_cm": 176.5,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 8,
+    "fields": {
+      "user": 108,
+      "name": "Team 1 - Player 8",
+      "height_in_cm": 179,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 9,
+    "fields": {
+      "user": 109,
+      "name": "Team 1 - Player 9",
+      "height_in_cm": 182,
+      "team": 1
+    }
+  },
+  {
+    "model": "backend.player",
+    "pk": 10,
+    "fields": {
+      "user": 110,
+      "name": "Team 1 - Player 10",
+      "height_in_cm": 179,
+      "team": 1
+    }
+  }
 ]
